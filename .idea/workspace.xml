@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6672906a-cca1-4284-9afa-36e94535779e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/TeamModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/controllers/Controller.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/controllers/Controller.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/main/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/main/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/PlayerMemStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/PlayerMemStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/PlayerStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/PlayerStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/TeamMemStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/TeamMemStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/TeamModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/TeamModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/TeamStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/models/TeamStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/views/PlayerView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/fantasyfootball/console/views/PlayerView.kt" afterDir="false" />
     </list>
+    <list id="54fe6a4f-ad69-4954-b77b-cc1ae5dfad45" name="Changes by bryan" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,16 +56,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "/home/ryanjenkins/Documents/College/MobileApp/FantasyFootballApp",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fantasyfootball.console.main.MainKt" />
+      <module name="FanstasyFootballApp.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="FantasyFootballApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="FantasyFootballApp" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.MainKt" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,8 +105,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664211864544</updated>
+      <workItem from="1666179592159" duration="874000" />
+      <workItem from="1666180484404" duration="298000" />
+      <workItem from="1666183341474" duration="956000" />
+      <workItem from="1666185211628" duration="10389000" />
+      <workItem from="1666266409202" duration="12128000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
