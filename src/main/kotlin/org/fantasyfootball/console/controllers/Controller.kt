@@ -1,5 +1,6 @@
 package org.fantasyfootball.console.controllers
 
+
 import mu.KotlinLogging
 import org.fantasyfootball.console.models.PlayerMemStore
 import org.fantasyfootball.console.models.PlayerModel
@@ -32,8 +33,11 @@ class Controller {
                 3 -> listTeams()
                 4 -> searchTeams()
                 5 -> deleteTeam()
-                6 ->{ players.create()
-                    playerView.playerMenu()}
+                6 ->
+                {
+                    players.create()
+                    playerMenu()
+                }
                 -99 -> dummyData()
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
@@ -43,8 +47,26 @@ class Controller {
         logger.info { "Shutting Down Fantasy Football App" }
     }
 
+    private fun playerMenu(){
+        var input: Int
+        do {
+            input = menu2()
+            when (input) {
+                1 -> listPlayers()
+                2 -> addPLayer()
+                3 -> searchPLayers()
+
+                -1 -> println("Exiting App")
+                else -> println("Invalid Option")
+            }
+            println()
+        } while (input != -1)
+
+    }
+
     fun menu() :Int { return teamView.menu() }
     fun menu2() :Int { return playerView.menu2() }
+
 
     fun addTeam(){
         val aTeam = TeamModel()
@@ -63,6 +85,7 @@ class Controller {
         playerView.listPlayers(players)
     }
 
+
     fun deleteTeam() {
         listTeams()
         print("Enter index to delete")
@@ -71,6 +94,56 @@ class Controller {
         teams.delete(teams.teams.get(index.toInt()))
 
     }
+
+    fun addPLayer() {
+        val newPLayer = playerView.addPlayer()
+        players.add(newPLayer)
+    }
+
+    fun searchPLayers() {
+        var input: Int
+
+        do {
+            input = playerView.searchPLayers(players)
+            when (input) {
+                1 -> searchByPos()
+                2 -> searchByNum()
+                -1 -> println("Exiting App")
+                else -> println("Invalid Option")
+            }
+            println()
+        } while (input != -1)
+
+    }
+
+    private fun searchByPos() {
+        println("Enter player position: ")
+        val position = readLine()!!
+        val foundPLayers = players.findByPosition(position)
+
+        println("PLayers of position $position ")
+        foundPLayers.forEach{
+            println(it.name)
+            println(it.position)
+            println(it.number)
+            println()
+        }
+    }
+
+    private fun searchByNum() {
+        println("Enter player number: ")
+        val number = readLine()!!
+        val foundPLayers = players.findByNumber(number.toInt())
+
+        println("PLayers of position $number ")
+        foundPLayers.forEach{
+            println(it.name)
+            println(it.position)
+            println(it.number)
+            println()
+        }
+    }
+
 
     fun updateTeam() {
 
