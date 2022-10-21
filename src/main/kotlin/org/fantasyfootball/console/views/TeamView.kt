@@ -1,6 +1,6 @@
 package org.fantasyfootball.console.views
 
-import org.fantasyfootball.console.models.TeamMemStore
+import org.fantasyfootball.console.models.TeamJSONStore
 import org.fantasyfootball.console.models.TeamModel
 
 class TeamView {
@@ -27,7 +27,7 @@ class TeamView {
         return option
     }
 
-    fun listTeams(teams : TeamMemStore) {
+    fun listTeams(teams: TeamJSONStore) {
         println("List All Teams")
         println()
         teams.logAll()
