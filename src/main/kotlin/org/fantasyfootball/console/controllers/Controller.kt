@@ -3,15 +3,16 @@ package org.fantasyfootball.console.controllers
 
 import mu.KotlinLogging
 import org.fantasyfootball.console.models.PlayerMemStore
-import org.fantasyfootball.console.models.PlayerModel
-import org.fantasyfootball.console.models.TeamMemStore
 import org.fantasyfootball.console.models.TeamModel
 import org.fantasyfootball.console.views.PlayerView
 import org.fantasyfootball.console.views.TeamView
+import org.fantasyfootball.console.models.TeamJSONStore
 
 class Controller {
 
-    val teams = TeamMemStore()
+
+//    val teams = TeamMemStore()
+    val teams = TeamJSONStore()
     val players = PlayerMemStore()
     val teamView = TeamView()
     val playerView = PlayerView()
@@ -88,14 +89,14 @@ class Controller {
 
     fun deleteTeam() {
         listTeams()
-        print("Enter index to delete")
+        print("Enter id to delete")
         var index = readLine()!!
 
         teams.delete(teams.teams.get(index.toInt()))
 
     }
 
-    fun addPLayer() {
+       fun addPLayer() {
         val newPLayer = playerView.addPlayer()
         players.add(newPLayer)
     }
@@ -135,7 +136,7 @@ class Controller {
         val number = readLine()!!
         val foundPLayers = players.findByNumber(number.toInt())
 
-        println("PLayers of position $number ")
+        println("PLayers of number $number ")
         foundPLayers.forEach{
             println(it.name)
             println(it.position)
@@ -171,7 +172,7 @@ class Controller {
 
 
     fun search(id: Long) : TeamModel? {
-        val foundTeam = teams.findOne(id)
+        val foundTeam = teams.findOne(id,teams.teams)
         return foundTeam
     }
 
