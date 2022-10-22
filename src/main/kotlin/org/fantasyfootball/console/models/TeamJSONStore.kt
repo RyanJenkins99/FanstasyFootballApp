@@ -7,9 +7,9 @@ import mu.KotlinLogging
 
 import org.fantasyfootball.console.helpers.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 private val logger = KotlinLogging.logger {}
-
 
 val JSON_FILE = "teams.json"
 val gsonBuilder = GsonBuilder().setPrettyPrinting().create()
@@ -33,20 +33,26 @@ class TeamJSONStore : TeamStore {
         return teams
     }
 
-    override fun findOne(id: Long, teams: MutableList<TeamModel>) : TeamModel? {
-        var foundTeam: TeamModel? = teams.find { p -> p.id == id }
-        return foundTeam
-    }
+     override fun findOne(id: Long, team: MutableList<TeamModel>): TeamModel? {
+         var foundTeam: TeamModel? = teams.find { p -> p.id == id }
+         return foundTeam
+     }
+
+//    override fun findOne(id: Long,teams:ArrayList<TeamModel>): TeamModel? {
+//        var foundTeam: TeamModel? = teams.find { p -> p.id == id }
+//        return foundTeam
+//    }
 
     override fun create(team: TeamModel) {
-        team.id = generateRandomId()
+//        team.id = generateRandomId()
+        team.id = getId()
         teams.add(team)
         logAll()
         serialize()
     }
 
     override fun update(team: TeamModel) {
-//        var foundTeam = findOne(team.id!!)
+//        var foundTeam= findOne(team.id!!)
 //        if (foundTeam != null) {
 //            foundTeam.title = team.title
 //            foundTeam.description = team.description
@@ -54,8 +60,8 @@ class TeamJSONStore : TeamStore {
 //        serialize()
     }
 
-    override fun delete(Team:TeamModel){
-        teams.remove(Team)
+    override fun delete(team: TeamModel) {
+        teams.remove(team)
     }
 
     internal fun logAll() {

@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "title": "cool team",
+    "description": "4-3-3"
+  },
+  {
+    "id": 2,
+    "title": "backup team",
+    "description": "4-4-2"
+  },
+  {
+    "id": 3,
+    "title": "third team",
+    "description": "3-4-4"
+  },
+  {
+    "id": 4,
+    "title": "4th team",
+    "description": "5-3-3"
+  },
+  {
+    "id": 0,
+    "title": "Ryan new team",
+    "description": "4-4-2"
+  }
+  
+]
