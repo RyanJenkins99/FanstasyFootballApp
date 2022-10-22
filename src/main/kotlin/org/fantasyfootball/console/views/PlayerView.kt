@@ -16,7 +16,7 @@ class PlayerView {
         println(" 1. List All Players")
         println(" 2. Add Player")
         println(" 3. Search Players")
-        println("-1. Exit")
+        println(" -1. Exit")
         println()
         print("Enter Option : ")
         input = readLine()!!
@@ -46,6 +46,15 @@ class PlayerView {
        // logger.info { "Shutting Down Fantasy Football App" }
     }
     fun listPlayers(players : PlayerMemStore) {
+
+
+        println(
+            "\n" +
+                    "\n" +
+                    "█░░ █ █▀ ▀█▀   █▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█ █▀\n" +
+                    "█▄▄ █ ▄█ ░█░   █▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄ ▄█"
+        )
+
         println("List All Players")
         println()
         players.logAll()
@@ -54,6 +63,15 @@ class PlayerView {
     }
 
     fun addPlayer(): PlayerModel {
+
+        println(
+            "\n" +
+                    "\n" +
+                    "▄▀█ █▀█ █▀█   █▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█ █▀\n" +
+                    "█▀█ █▀▀ █▀▀   █▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄ ▄█"
+        )
+
+
         println("Adding a new player")
         val newPLayer = PlayerModel()
 
@@ -71,6 +89,14 @@ class PlayerView {
 
     fun searchPLayers(players : PlayerMemStore): Int {
         val choice : Int
+
+
+        println(
+            "\n" +
+                    "\n" +
+                    "█▀ █▀▀ ▄▀█ █▀█ █▀▀ █░█   █▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█ █▀\n" +
+                    "▄█ ██▄ █▀█ █▀▄ █▄▄ █▀█   █▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄ ▄█"
+        )
 
 
         println("Search for a Player Menu")

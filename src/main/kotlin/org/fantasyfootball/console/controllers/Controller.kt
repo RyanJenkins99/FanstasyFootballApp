@@ -20,7 +20,7 @@ class Controller {
 
     init {
         logger.info { "Launching Fantasy Football App" }
-        println("Fantasy FootballApp ")
+
     }
 
     fun start() {
@@ -29,6 +29,9 @@ class Controller {
         do {
             input = menu()
             when (input) {
+
+
+
                 1 -> addTeam()
                 2 -> updateTeam()
                 3 -> listTeams()
@@ -88,8 +91,7 @@ class Controller {
 
 
     fun deleteTeam() {
-        listTeams()
-        print("Enter id to delete")
+        print("Enter id to delete: ")
         var index = readLine()!!
 
         teams.delete(teams.teams.get(index.toInt()))
@@ -179,8 +181,8 @@ class Controller {
 
 
     fun dummyData() {
-        teams.create(TeamModel(title = "New York New York", description = "So Good They Named It Twice"))
-        teams.create(TeamModel(title= "Ring of Kerry", description = "Some place in the Kingdom"))
-        teams.create(TeamModel(title = "Waterford City", description = "You get great Blaas Here!!"))
+        teams.create(TeamModel(title = "Manchester City", description = "Home to the reigning champions"))
+        teams.create(TeamModel(title= "Liverpool", description = "Home to the reds"))
+        teams.create(TeamModel(title = "Chelsea", description = "Home to the blues"))
     }
 }
